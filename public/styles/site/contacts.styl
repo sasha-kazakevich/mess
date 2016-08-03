@@ -1,0 +1,133 @@
+.contacts
+  margin-left 200px
+
+  h1
+    margin 0
+    margin-bottom 35px
+    font-size 30px
+    font-weight 100
+
+  .contacts-wrapper
+    display flex
+    position absolute
+    height 100%
+
+    .contact-info, .contact-form
+      width 50%
+
+    .contact-info
+      padding 20px 40px
+
+      h2
+        font-size 16px
+        font-weight 100
+        line-height 24px
+        text-align left
+        &:before
+          content ''
+          display inline-block
+          width 33px
+          height 33px
+          margin-right 30px
+          position relative
+          top 15px
+          background url('../images/cont/icons.png') no-repeat center center
+
+      .icon1
+        &:before
+          background-position -84px -5px
+
+      .icon2
+        &:before
+          background-position -47px -5px
+
+      .icon3
+        &:before
+          background-position -5px -5px
+
+      span
+        margin-left 60px
+
+      p
+        font-size 14px
+
+      p.first
+        margin-top 40px
+
+    .contact-form
+      padding 20px 0
+      background url('../images/cont/bg-form.png')
+      background-size cover
+      // position fixed
+      // height 100%
+
+      h1
+        text-align center
+        color #fff
+
+      form
+        width 70%
+        margin 0 auto
+        font-size 16px
+        input,textarea,button
+          dispaly block
+          width 100%
+          margin 0 auto 25px
+          padding 14px 50px
+          outline none
+        input::-webkit-input-placeholder
+          text-indent 0
+          color #000
+          transition text-indent .3s ease
+        input::-moz-placeholder
+          text-indent 0
+          color #000
+          transition text-indent .3s ease
+        input:-moz-placeholder
+          text-indent 0
+          color #000
+          transition text-indent .3s ease
+        input:-ms-input-placeholder
+          text-indent 0
+          color #000
+          transition text-indent .3s ease
+        input:focus::-webkit-input-placeholder
+          text-indent 500px
+        input:focus::-moz-placeholder
+          text-indent 500px
+        input:focus:-moz-placeholder
+          text-indent 500px
+        input:focus:-ms-input-placeholder
+          text-indent 500px
+
+        textarea::-webkit-input-placeholder
+          color #000
+          transition opacity .3s ease
+        textarea::-moz-placeholder
+          color #000
+          transition opacity .3s ease
+        textarea:-moz-placeholder
+          color #000
+          transition opacity .3s ease
+        textarea:-ms-input-placeholder
+          color #000
+          transition opacity .3s ease
+        textarea:focus::-webkit-input-placeholder
+          opacity 0
+        textarea:focus::-moz-placeholder
+          opacity 0
+        textarea:focus:-moz-placeholder
+          opacity 0
+        textarea:focus:-ms-input-placeholder
+          opacity 0
+        textarea
+          resize none
+          height 145px
+        button
+          background #993333
+          border none
+          color #fff
+          font-size 18px
+          &:hover
+            background #000
+            cursor pointer

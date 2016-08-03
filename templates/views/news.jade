@@ -1,0 +1,16 @@
+extends ../layouts/default
+
+block content
+  .news-page
+    h1 Новости
+    each news in newss
+      .news-block
+        a(id=news.id).date #{news.date}
+        each img in news.images
+          img(src=img.url alt="img")
+        p.title #{news.title}
+        | !{news.short_news}
+        .full-news
+          | !{news.full_news}
+        .button-news
+          | Читать дальше

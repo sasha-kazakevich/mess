@@ -1,0 +1,107 @@
+/*---MAIN-MENU---*/
+.main-menu
+  position fixed
+  width 200px
+  height 100%
+  background-color #2d2d2d
+  color #fff
+  // display none
+  z-index 100
+
+.main-menu_logo
+  float left
+  padding 21px
+.main-menu_lang
+  font-size 10px
+  margin 0
+  padding 20px 20px 0 0
+  text-align right
+  // cursor pointer
+  opacity 0
+  &:hover
+    color #993333
+.main-menu_name
+  margin 0
+  padding 18px 0 0
+  font-size 18px
+  vertical-align bottom
+.main-menu_header
+  margin-bottom 55px
+.main-menu_list
+  clear both
+  list-style-type none
+  margin 0
+  padding 0 15px
+  li
+    border-top 1px solid #383838
+    border-bottom 1px solid #383838
+    margin-bottom 22px
+    transition all ease-out 0.3s
+    a
+      width 100%
+      height 100%
+      padding 5px
+      display flex
+      align-items center
+      color #fff
+      text-decoration none
+    .icon
+      width 30px
+      height 30px
+      margin 0 4px
+      background url('../images/menu/menu_sprites.png') no-repeat
+    p
+      margin 0 0 0 24px
+      font-size 12px
+    .main
+      background-position: -301px -5px;
+    .tech
+      background-position: -461px -5px;
+    .char
+      background-position: -85px -5px;
+    .client
+      background-position: -165px -5px;
+    .contacts
+      background-position: -233px -5px;
+    .about
+      background-position: -5px -5px;
+    .news
+      background-position: -381px -5px;
+    &:hover
+      background-color #fff
+      cursor pointer
+      p
+        color #000
+      .main
+        background-position: -341px -5px;
+      .tech
+        background-position: -501px -5px;
+      .char
+        background-position: -125px -5px;
+      .client
+        background-position: -199px -5px;
+      .contacts
+        background-position: -267px -5px;
+      .about
+        background-position: -45px -5px;
+      .news
+        background-position: -421px -5px;
+
+  .active
+    background-color #fff
+    p
+      color #000
+    .main
+      background-position: -341px -5px;
+    .tech
+      background-position: -501px -5px;
+    .char
+      background-position: -125px -5px;
+    .client
+      background-position: -199px -5px;
+    .contacts
+      background-position: -267px -5px;
+    .about
+      background-position: -45px -5px;
+    .news
+      background-position: -421px -5px;

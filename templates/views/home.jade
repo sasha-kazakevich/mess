@@ -1,0 +1,32 @@
+extends ../layouts/default
+
+block content
+	.main-page
+		.video-messka
+			video#video(width="100%" height="auto" autoplay="autoplay" loop="loop" preload="auto")
+				source(src="video/video.mp4")
+		header.layer
+			p Частное торгово-производственное унитарное предприятие  «СидАл-Техно»
+		.main-info.layer
+			.main-name
+				h1 Диспергатор Месска
+				p.tagline Эффективность. Экономия. Экология
+				p.technology Технология для улучшения качества сжигания мазутного топлива. Решение проблемы содержания излишка воды в мазуте или ее неравномерного распределения по всему объему.
+				a.button(href='/kinds')
+					p Характеристики
+				.download
+					.download-icon
+					a(href='Presentaion.pdf' download) Скачать презентацию
+			.main-news
+				h2 Новости
+				each news in newss
+					.news-block
+						a(href='/news##{news.id}').news #{news.title}
+						p.date #{news.date}
+				.archive
+					a.arh(href='/news') Архив новостей
+		footer.layer
+			p &#169;2016 год
+			a(href="https://www.facebook.com/%D0%94%D0%B8%D1%81%D0%BF%D0%B5%D1%80%D0%B3%D0%B0%D1%82%D0%BE%D1%80-%D0%9C%D0%B5%D1%81%D1%81%D0%BA%D0%B0-275473652819057/?fref=ts")
+				| Мы на Facebook:
+				img(src="images/main/facebook.png" alt="fb")
