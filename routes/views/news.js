@@ -1,4 +1,5 @@
 var keystone = require('keystone');
+var Intl = require('intl');
 
 exports = module.exports = function (req, res) {
 
@@ -15,15 +16,15 @@ exports = module.exports = function (req, res) {
 			if(result){
 				// var formatter = new Intl.DateTimeFormat("ru");
 
-				var options = {
-					year: 'numeric',
-					month: 'numeric',
-					day: 'numeric',
-				};
+				// var options = {
+				// 	year: 'numeric',
+				// 	month: 'numeric',
+				// 	day: 'numeric',
+				// };
 
 					locals.newss = result.reverse().map(function(news) {
 						return {title: news.title,
-										date: news.date.toLocaleString("ru", options),
+										date: new Intl.DateTimeFormat("ru").format(news.date),
 										short_news: news.content.short_news,
 										images: news.content.images,
 										full_news: news.content.full_news,
