@@ -15,11 +15,17 @@ exports = module.exports = function (req, res) {
 			if(result){
 				if (result.length > 3) result = result.slice(-3)
 
-				var formatter = new Intl.DateTimeFormat("ru");
+				var options = {
+				  year: 'numeric',
+				  month: 'numeric',
+				  day: 'numeric',
+				};
 
-					locals.newss = result.reverse().map(function(news){
+				// var formatter = new Intl.DateTimeFormat("ru");
+
+					locals.newss = result.reverse().map( function(news){
 						return {title: news.title,
-										date: formatter.format(news.date),
+										date: news.date.toLocaleString("ru", options),
 										id: news.slug}
 					});
 
