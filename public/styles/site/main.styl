@@ -3,38 +3,42 @@
   // padding 0 200px
   // background url(../images/main/back.png) no-repeat
   background-color #000
-  // background-size cover
+  background-size cover
   color #fff
   position fixed
   height 100%
   width 100%
   display flex
   flex-direction column
+  justify-content space-around
   // height 100%
   // left 200px
-  .video-messka
-    position fixed
+  .is_overlay
+    display block
     width 100%
     height 100%
+  #trailer
+    position fixed
     top 0
     right 0
     bottom 0
     left 0
     opacity .3
+    overflow hidden
     // overflow hidden
     // z-index 1
-  .video-messka > video
-    // position absolute
+  #trailer > video
     min-width 100%
     min-height 100%
-  	width auto
-  	height auto
+    width auto
+    height auto
+
   p
     margin 0
 
   .layer
-        positin relative
-        z-index 100
+    position relative
+    z-index 100
 
   header
     font-size 14px

@@ -29,8 +29,7 @@ summary {
 }
 audio,
 canvas,
-progress,
-video {
+progress {
   display: inline-block;
   vertical-align: baseline;
 }
@@ -6882,6 +6881,7 @@ body {
 }
 .main-page {
   background-color: #000;
+  background-size: cover;
   color: #fff;
   position: fixed;
   height: 100%;
@@ -6893,29 +6893,34 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
-.main-page .video-messka {
-  position: fixed;
+.main-page .is_overlay {
+  display: block;
   width: 100%;
   height: 100%;
+}
+.main-page #trailer {
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   opacity: 0.3;
+  overflow: hidden;
 }
-.main-page .video-messka > video {
+.main-page #trailer > video {
   min-width: 100%;
   min-height: 100%;
-}
-.main-page width auto {
+  width: auto;
   height: auto;
 }
 .main-page p {
   margin: 0;
 }
 .main-page .layer {
-  positin: relative;
+  position: relative;
   z-index: 100;
 }
 .main-page header {
