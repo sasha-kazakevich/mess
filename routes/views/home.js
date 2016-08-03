@@ -17,11 +17,11 @@ exports = module.exports = function (req, res) {
 
 				var formatter = new Intl.DateTimeFormat("ru");
 
-					locals.newss = result.reverse().map(news => ({
-						title: news.title,
-						date: formatter.format(news.date),
-						id: news.slug
-					}));
+					locals.newss = result.reverse().map(function(news){
+						return {title: news.title,
+										date: formatter.format(news.date),
+										id: news.slug}
+					});
 
 					next(err);
 			} else {
