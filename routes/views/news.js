@@ -16,15 +16,15 @@ exports = module.exports = function (req, res) {
 			if(result){
 				// var formatter = new Intl.DateTimeFormat("ru");
 
-				// var options = {
-				// 	year: 'numeric',
-				// 	month: 'numeric',
-				// 	day: 'numeric',
-				// };
+				var options = {
+					year: 'numeric',
+					month: 'long',
+					day: 'numeric',
+				};
 
 					locals.newss = result.reverse().map(function(news) {
 						return {title: news.title,
-										date: new Intl.DateTimeFormat("ru").format(news.date),
+										date: new Intl.DateTimeFormat("ru-RU",options).format(news.date),
 										short_news: news.content.short_news,
 										images: news.content.images,
 										full_news: news.content.full_news,

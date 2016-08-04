@@ -16,9 +16,9 @@ block content
         p (BYR) р/с 3012055240009 в ЗАО «Белорусско-Швейцарский Банк <br/> «БелСвиссБанк» г.Минск, пр-т Победителей, 23/3 код 175
       .contact-form
         h1 Обратная связь
-        form.contacts-form#contacts-form
-          input(form="contacts-form" id="name" name="name" type="text" title="Ваше имя" placeholder="Ваше имя" required pattern="[a-zA-Zа-яА-Я ]+")
-          input(form="contacts-form" id="name" name="name" type="text" title="Ваш Email" placeholder="Ваш Email" required pattern="[a-zA-Zа-яА-Я ]+")
-          input(form="contacts-form" id="name" name="name" type="text" title="Ваш номер телефона" placeholder="Ваш номер телефона" required pattern="[a-zA-Zа-яА-Я ]+")
-          textarea(form="contacts-form" id="number" name="number" type="text" placeholder="Введите сообщение" required pattern="(\\+375 (25|29|33|44)( [0-9]{3}( [0-9]{2}){2}))")
-          button Отправить
+        form.contacts-form#contacts-form(method="post" action="/contacts/send")
+          input(form="contacts-form" id="name" name="name" type="text" title="Ваше Имя" placeholder="Ваше имя" pattern="[a-zA-Zа-яА-Я ]+")
+          input(form="contacts-form" id="email" name="email" type="email" title="Ваш Email" placeholder="Ваш Email" required pattern="^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}$")
+          input(form="contacts-form" id="number" name="number" type="text" title="Ваш телефон в формате +375 ** *** ** **" placeholder="Ваш телефон" required pattern="(\\+375 (25|29|33|44)( [0-9]{3}( [0-9]{2}){2}))")
+          textarea(form="contacts-form" id="message" name="message" type="text" placeholder="Введите сообщение" )
+          button(type="submit") Отправить

@@ -7824,6 +7824,11 @@ body {
   background: #000;
   cursor: pointer;
 }
+.thank {
+  text-align: center;
+  margin-left: 200px;
+  padding: 20px 40px;
+}
 .about-page {
   margin-left: 200px;
   padding: 20px 40px;

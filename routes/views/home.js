@@ -18,7 +18,7 @@ exports = module.exports = function (req, res) {
 
 				var options = {
 				  year: 'numeric',
-				  month: 'numeric',
+				  month: 'long',
 				  day: 'numeric',
 				};
 
@@ -26,7 +26,7 @@ exports = module.exports = function (req, res) {
 
 					locals.newss = result.reverse().map( function(news){
 						return {title: news.title,
-										date: new Intl.DateTimeFormat("ru").format(news.date),
+										date: new Intl.DateTimeFormat("ru-RU",options).format(news.date),
 										id: news.slug}
 					});
 

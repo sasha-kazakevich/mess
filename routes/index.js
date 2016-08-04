@@ -22,6 +22,8 @@ exports = module.exports = function (app) {
 	app.get('/functions', routes.views.characteristicsFunction);
 	app.get('/clients', routes.views.clients);
 	app.get('/contacts', routes.views.contacts);
+	app.post('/contacts/send', routes.views.contactsSend);
+	app.get('/thank', routes.views.thank);
 	app.get('/about', routes.views.about);
 	app.get('/news', routes.views.news);
 
