@@ -19,6 +19,6 @@ block content
         form.contacts-form#contacts-form(method="post" action="/contacts/send")
           input(form="contacts-form" id="name" name="name" type="text" title="Ваше Имя" placeholder="Ваше имя" pattern="[a-zA-Zа-яА-Я ]+")
           input(form="contacts-form" id="email" name="email" type="email" title="Ваш Email" placeholder="Ваш Email" required pattern="^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}$")
-          input(form="contacts-form" id="number" name="number" type="text" title="Ваш телефон в формате +375 ** *** ** **" placeholder="Ваш телефон" required pattern="(\\+375 (25|29|33|44)( [0-9]{3}( [0-9]{2}){2}))")
+          input(form="contacts-form" id="number" name="number" type="text" title="Ваш телефон (только цифры)" placeholder="Ваш телефон" required pattern="[0-9]+")
           textarea(form="contacts-form" id="message" name="message" type="text" placeholder="Введите сообщение" )
           button(type="submit") Отправить
