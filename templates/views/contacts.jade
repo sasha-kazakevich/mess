@@ -19,6 +19,6 @@ block content
         form.contacts-form#contacts-form(method="post" action="/contacts/send")
           input(form="contacts-form" id="name" name="name" type="text" title="Ваше Имя" placeholder="Ваше имя" )
           input(form="contacts-form" id="email" name="email" type="email" title="Ваш Email" placeholder="Ваш Email" )
-          input(form="contacts-form" id="number" name="number" type="number" title="Ваш телефон" placeholder="Ваш телефон")
+          input(form="contacts-form" id="number" name="number" type="text" title="Ваш телефон" placeholder="Ваш телефон")
           textarea(form="contacts-form" id="message" name="message" type="text" placeholder="Введите сообщение" )
           button(type="submit") Отправить
