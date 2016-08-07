@@ -17,8 +17,8 @@ block content
       .contact-form
         h1 Обратная связь
         form.contacts-form#contacts-form(method="post" action="/contacts/send")
-          input(form="contacts-form" id="name" name="name" type="text" title="Ваше Имя" placeholder="Ваше имя" pattern="[a-zA-Zа-яА-Я ]+")
-          input(form="contacts-form" id="email" name="email" type="email" title="Ваш Email" placeholder="Ваш Email" required pattern="^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}$")
-          input(form="contacts-form" id="number" name="number" type="text" title="Ваш телефон (только цифры)" placeholder="Ваш телефон" required pattern="[0-9]+")
+          input(form="contacts-form" id="name" name="name" type="text" title="Ваше Имя" placeholder="Ваше имя" )
+          input(form="contacts-form" id="email" name="email" type="email" title="Ваш Email" placeholder="Ваш Email" )
+          input(form="contacts-form" id="number" name="number" type="number" title="Ваш телефон" placeholder="Ваш телефон")
           textarea(form="contacts-form" id="message" name="message" type="text" placeholder="Введите сообщение" )
           button(type="submit") Отправить
