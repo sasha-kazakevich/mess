@@ -1,7 +1,7 @@
 extends ../layouts/default
 
 block content
-  .contacts
+  .contacts-page
     .contacts-wrapper
       .contact-info
         h1 Контакты
@@ -11,9 +11,7 @@ block content
           span A.Sidliarevskiy@yandex.ru
         h2.icon3 Факс <br/>
           span +375 (17) 390 62 63
-        p.first Частное торгово-производственное унитарное предприятие <br/> «СидАл-Техно» 
-        p 220004,г.Минск, ул.Притыцкого, дом № 107, ПТС, ком.1 <br/> УНН: 191425939
-        p (BYR) р/с 3012055240009 в ЗАО «Белорусско-Швейцарский Банк <br/> «БелСвиссБанк» г.Минск, пр-т Победителей, 23/3 код 175
+        p.first Частное производственное предприятие «СидАл-Техно»
       .contact-form
         h1 Обратная связь
         form.contacts-form#contacts-form(method="post" action="/contacts/send")

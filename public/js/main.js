@@ -25,16 +25,14 @@ jQuery(document).ready(function($){
 		firstLoad = true;
 	});
 
+
 	var newPageArray = location.pathname;
-	console.log(newPageArray);
-	if (newPageArray === '/kinds') $('.char-menu li:first-child a').addClass('selected')
 
-	if (newPageArray === '/advantages') $('.char-menu li:nth-child(2) a').addClass('selected')
+	if (newPageArray === '/kinds') $('.char-menu li:first-child a').addClass('selected');
+	if (newPageArray === '/advantages') $('.char-menu li:nth-child(2) a').addClass('selected');
+	if (newPageArray === '/options') $('.char-menu li:nth-child(3) a').addClass('selected');
+	if (newPageArray === '/functions') $('.char-menu li:nth-child(4) a').addClass('selected');
 
-	if (newPageArray === '/options') $('.char-menu li:nth-child(3) a').addClass('selected')
-
-	if (newPageArray === '/functions') $('.char-menu li:nth-child(4) a').addClass('selected')
-	// $('.char-menu li:first-child a').addClass('selected'); // me code
 
 
 	//detect the 'popstate' event - e.g. user clicking the back button
@@ -155,22 +153,47 @@ jQuery(document).ready(function($){
 
 	//accardion
 	$(function(){
-		var button = $('.button-news'),
+		var button = $('.button-news')
 				fullNews = $('.full-news');
+		$.fn.toggleText = function(t1, t2){
+		  if (this.text() == t1) this.text(t2);
+		  else                   this.text(t1);
+		  return this;
+		};
 		button.on('click',function() {
 			event.preventDefault();
-			fullNews.not($(this).prev().slideToggle()).slideUp('normal');
+			fullNews.not($(this).prev().slideToggle());
+			$(this).toggleText('Читать дальше','Свернуть');
 		});
 	});
 
 	//main-menu
 	$(function(){
-		var mainMenu = $('.main-menu_list  li');
-		// console.log(mainMenu);
-		$('.main-menu_list  li').on('click', function (e) {
-	    mainMenu.removeClass('active').eq(mainMenu.index(this)).addClass('active');
-			console.log(mainMenu.index(this));
-	  });
+		var mainMenu = $('#main-menu');
+		var openMenu = $('#menu-open');
+
+		openMenu.on('click', function() {
+			openMenu.toggleClass('openMenu');
+			mainMenu.toggleClass('open');
+		});
+	});
+
+	//char
+	$(function(){
+		var buttonUp = $('#up-block');
+
+		buttonUp.on('click', function() {
+			event.preventDefault();
+			$("html,body").animate({ scrollTop: 0}, 1000);
+			return false;
+		});
+	});
+
+	$(function(){
+		var newPage = location.pathname;
+		var str = newPage.slice(1,newPage.langth);
+		if (str === '') str = 'main';
+		var lilili = $('.main-menu_list li.' + str).addClass('active');
 	})
 
 });

@@ -1,8 +1,54 @@
-.technology
+.technology-page
   margin-left 200px
 
   h1
     margin 0 // make global
+
+  +below(780px)
+    margin 0 10px 0 10px
+    .technology-text
+      width 100%
+      padding 30px 10px
+      margin-top 50px
+    .technology-imgblock
+      display none
+  +below(520px)
+    .technology-wrapper
+      // display block
+    .technology-text
+      font-size 14px
+      h1
+        font-size 18px
+      h2
+        font-size 16px
+        line-height 20px
+      p
+        text-align left
+        line-height 14px
+      table
+        font-size 12px
+        margin-top 20px
+        td
+          padding 5px 0
+        .td-name
+          font-size 18px
+        .td-style
+          border none
+          text-align right
+    .up-block
+      display block
+      position absolute
+      margin-top 20px
+      left 0
+      width 100%
+      background url(../images/tech/bg-up.png) no-repeat
+      background-size cover
+      img
+        display block
+        margin 100px auto
+        cursor pointer
+        // padding 100px 0
+        // border 1px solid red
 
 .technology-wrapper
   display flex
@@ -42,6 +88,8 @@
     .td-style
       text-align center
       border-left 1px solid #e79f9f
+.up-block
+  display none
 
 
 .technology-imgblock

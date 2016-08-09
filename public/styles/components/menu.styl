@@ -6,8 +6,40 @@
   background-color #2d2d2d
   color #fff
   // display none
-  z-index 100
-
+  z-index 200
+  transition height 0.5s ease-out
+  +below(780px)
+    width 100%
+    height 50px
+    overflow hidden
+    .main-menu_logo
+      width 40px
+      height 40px
+      margin 5px
+      padding 0
+      margin-left 20px
+    .main-menu_lang
+      display none
+    .main-menu_open
+      display block
+      position absolute
+      right 25px
+      top 18px
+      width 30px
+      height 15px
+      cursor pointer
+      background url('../images/menu/open.png') no-repeat
+    .openMenu
+      background-position 0px -19px
+    .header-info
+      width 220px
+      margin 0 auto
+    .main-menu_list
+      li
+        width 200px
+        margin 0 auto 7px
+.open
+  height 100%
 .main-menu_logo
   float left
   padding 21px
@@ -20,13 +52,34 @@
   opacity 0
   &:hover
     color #993333
+.main-menu_open
+  display none
+
+.header-info
+  clear both
+  font-size 12px
+  margin 0
+  &:before
+    content ''
+    display inline-block
+    width 23px
+    height 23px
+    margin 0 10px 0 20px
+    position relative
+    top 4px
+.main-menu_email
+  &:before
+    background url('../images/menu/mail.svg') no-repeat center center
+.main-menu_number
+  &:before
+    background url('../images/menu/phone.svg') no-repeat center center
 .main-menu_name
   margin 0
   padding 18px 0 0
   font-size 18px
   vertical-align bottom
 .main-menu_header
-  margin-bottom 55px
+  margin-bottom 30px
 .main-menu_list
   clear both
   list-style-type none
@@ -48,18 +101,18 @@
     .icon
       width 30px
       height 30px
-      margin 0 4px
+      margin 0 1px
       background url('../images/menu/menu_sprites.png') no-repeat
     p
       margin 0 0 0 24px
-      font-size 12px
+      font-size 14px
     .main
       background-position: -301px -5px;
-    .tech
+    .technology
       background-position: -461px -5px;
-    .char
+    .kinds
       background-position: -85px -5px;
-    .client
+    .clients
       background-position: -165px -5px;
     .contacts
       background-position: -233px -5px;
@@ -74,11 +127,11 @@
         color #000
       .main
         background-position: -341px -5px;
-      .tech
+      .technology
         background-position: -501px -5px;
-      .char
+      .kinds
         background-position: -125px -5px;
-      .client
+      .clients
         background-position: -199px -5px;
       .contacts
         background-position: -267px -5px;
@@ -93,11 +146,11 @@
       color #000
     .main
       background-position: -341px -5px;
-    .tech
+    .technology
       background-position: -501px -5px;
-    .char
+    .kinds
       background-position: -125px -5px;
-    .client
+    .clients
       background-position: -199px -5px;
     .contacts
       background-position: -267px -5px;

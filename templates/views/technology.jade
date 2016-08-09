@@ -1,7 +1,7 @@
 extends ../layouts/default
 
 block content
-  .technology
+  .technology-page
     .technology-wrapper
       section.technology-text
         h1 Технология
@@ -57,7 +57,8 @@ block content
           tr
             td Срок изготовления
             td.td-style 4 недели
-             
+        .up-block#up-block
+          img(src="images/tech/up.png" alt="up")
       .technology-imgblock
         -var imgs = ['images/tech/img1.png','images/tech/img2.png','images/tech/img3.png']
           each img in imgs

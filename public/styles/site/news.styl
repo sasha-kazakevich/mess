@@ -25,6 +25,8 @@
 
     img
       width 400px
+      display block
+      margin 0 auto
       margin-bottom 25px
     .full-news
       display none
@@ -43,3 +45,18 @@
         color #fff
         background-color #993333
         border 1px solid #993333
+
+    .button-up
+      display none
+  +below(780px)
+    margin-left 0
+    padding 70px 20px 0 20px
+
+    .news-block
+      margin 20px 0
+  +below(520px)
+    h1
+      font-size 18px
+    .news-block
+      img
+        width 100%

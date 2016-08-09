@@ -35,17 +35,21 @@ html
 
 	//- HTML BODY
 	body
-		nav.main-menu
+		nav.main-menu#main-menu
 			header.main-menu_header
-				img.main-menu_logo(src="images/menu/logo.svg" alt="logo")
+				a(href="/")
+					img.main-menu_logo(src="images/menu/logo.svg" alt="logo")
 				p.main-menu_lang#lang ENG
 				h1.main-menu_name Месска
+				.main-menu_open#menu-open
+				p.main-menu_email.header-info A.Sidliarevskiy@yandex.ru
+				p.main-menu_number.header-info +375 (29) 651 89 37
 			ul.main-menu_list
-				-var names = ['main','tech','char','client','contacts','about','news']
+				-var names = ['main','technology','kinds','clients','contacts','about','news']
 				-var val = ['Главная','Технология','Характеристики','Для клиентов','Контакты','О компании','Новости']
 				-var href = ['/','/technology','/kinds','/clients','/contacts','/about','/news']
 					each name,index in names
-						li
+						li(class="#{name}")
 							a(href="#{href[index]}")
 								div.icon(class="#{name}")
 								p #{val[index]}
