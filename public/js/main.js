@@ -28,10 +28,22 @@ jQuery(document).ready(function($){
 
 	var newPageArray = location.pathname;
 
-	if (newPageArray === '/kinds') $('.char-menu li:first-child a').addClass('selected');
-	if (newPageArray === '/advantages') $('.char-menu li:nth-child(2) a').addClass('selected');
-	if (newPageArray === '/options') $('.char-menu li:nth-child(3) a').addClass('selected');
-	if (newPageArray === '/functions') $('.char-menu li:nth-child(4) a').addClass('selected');
+	if (newPageArray === '/kinds') {
+		$('.main-menu_list li.kinds').addClass('active');
+		$('.char-menu li:first-child a').addClass('selected');
+	}
+	if (newPageArray === '/advantages'){
+		$('.main-menu_list li.kinds').addClass('active');
+		$('.char-menu li:nth-child(2) a').addClass('selected');
+	}
+	if (newPageArray === '/options'){
+		$('.main-menu_list li.kinds').addClass('active');
+		$('.char-menu li:nth-child(3) a').addClass('selected');
+	}
+	if (newPageArray === '/functions'){
+		$('.main-menu_list li.kinds').addClass('active');
+		$('.char-menu li:nth-child(4) a').addClass('selected');
+	}
 
 
 
